@@ -37,7 +37,11 @@ function receiveInfo() {
           channel.consume(
             q.queue,
             function (msg) {
-              console.log("[Service 1] Received info!");
+              console.log(
+                "[Service " +
+                  config.get("amqp_binding_key") +
+                  "] Received info!"
+              );
               console.log(JSON.parse(msg.content));
 
               const info = JSON.parse(msg.content);
