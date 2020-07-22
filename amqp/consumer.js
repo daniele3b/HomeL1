@@ -1,5 +1,6 @@
 const amqp = require("amqplib/callback_api");
 const config = require("config");
+const { CreatePdf } = require("../helper/markdownEdit.js");
 
 function receiveInfo() {
   amqp.connect(config.get("amqp_server"), function (error0, connection) {
@@ -25,7 +26,11 @@ function receiveInfo() {
           if (error2) {
             throw error2;
           }
-          console.log("[Service 1] Waiting for info...");
+          console.log(
+            "[Service " +
+              config.get("amqp_binding_key") +
+              "] Waiting for info..."
+          );
 
           channel.bindQueue(q.queue, exchange, config.get("amqp_binding_key"));
 
@@ -34,6 +39,24 @@ function receiveInfo() {
             function (msg) {
               console.log("[Service 1] Received info!");
               console.log(JSON.parse(msg.content));
+
+              const info = JSON.parse(msg.content);
+
+              CreatePdf({
+                name: info.name,
+                surname: info.surname,
+                birthday_day: info.birthday_day,
+                birthday_month: info.birthday_month,
+                birthday_year: info.birthday_year,
+                day: info.day,
+                month: info.month,
+                year: info.year,
+                street: info.street,
+                city: info.city,
+                cap: info.cap,
+                to: info.to,
+                lang: "eng",
+              });
             },
             {
               noAck: true,
