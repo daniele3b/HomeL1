@@ -15,3 +15,7 @@ CreatePdf({
   to: "Avv Ivan Giacomoni",
   lang: "ita",
 });
+
+//Inviare email di prova (mancano le credenziali)
+//const {emailSender} = require('./helper/emailSender')
+//emailSender()
