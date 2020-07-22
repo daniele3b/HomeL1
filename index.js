@@ -18,6 +18,6 @@ markdownEditFile({
 
 console.log("asfsa");
 
-//Inviare email di prova
+//Inviare email di prova (mancano le credenziali) 
 //const {emailSender} = require('./helper/emailSender')
 //emailSender()
