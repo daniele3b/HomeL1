@@ -1,5 +1,6 @@
 {
   "template_location": "./template/",
   "tmp_location": "./tmp/",
-  "amqp_queue" : "HomeLess-queue"
+  "amqp_queue" : "HomeLess-queue",
+  "amqp_exchange" : "HomeLess-exchange"
 }

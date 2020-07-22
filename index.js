@@ -1,4 +1,5 @@
 const { markdownEditFile } = require("./helper/markdownEdit");
+const {receiveInfo} = require('./amqp/consumer.js')
 
 markdownEditFile({
   name: "Daniele",
@@ -11,3 +12,5 @@ markdownEditFile({
   to: "Avv Ivan Giacomoni",
   lang: "eng",
 });
+
+receiveInfo()

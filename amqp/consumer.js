@@ -1,9 +1,8 @@
 const amqp = require('amqplib/callback_api')
 const config = require('config')
 
-
-
-amqp.connect('amqp://localhost', function(error0, connection) {
+function receiveInfo(){
+    amqp.connect('amqp://localhost', function(error0, connection) {
   if (error0) {
     throw error0;
   }
@@ -11,24 +10,31 @@ amqp.connect('amqp://localhost', function(error0, connection) {
     if (error1) {
       throw error1;
     }
-    const queue = config.get('amqp_queue');
+    var exchange = config.get('amqp_exchange')
 
-    channel.assertQueue(queue, {
+    channel.assertExchange(exchange, 'direct', {
       durable: false
     });
 
-    console.log(" [*] Waiting for info in %s...", queue);
-    
-    channel.consume(queue, function(data) {
-        const info = JSON.parse(data.content)
-        console.log(info)
+    channel.assertQueue('', {
+      exclusive: true
+      }, function(error2, q) {
+        if (error2) {
+          throw error2;
+        }
+      console.log('[Service 1] Waiting for info...');
 
-        // Here we add some logic to put info into a file
-    
-    }, {
+      channel.bindQueue(q.queue, exchange, '1');
+
+      channel.consume(q.queue, function(msg) {
+        console.log('[Service 1] Received info!');
+        console.log(JSON.parse(msg.content));
+      }, {
         noAck: true
+      });
     });
-
   });
 });
+}
 
+exports.receiveInfo = receiveInfo
