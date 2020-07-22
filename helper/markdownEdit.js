@@ -129,6 +129,9 @@ function deleteTmpFile(src) {
 function CreatePdf(data) {
   var src = config.get("tmp_location") + data.name + data.surname + ".md";
   var out = config.get("out_location") + data.name + data.surname + ".pdf";
+  console.log(src);
+  console.log(out);
+  console.log("pandoc " + src + " --template " + src + "  | pandoc -o " + out);
   markdownEditFile(data).then((v) => {
     console.log("Created file to convert!");
     Pandoc(src, out).then(() => {
