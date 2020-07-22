@@ -1,6 +1,7 @@
 {
   "template_location": "./template/",
+  "template_name": "servizio",
   "tmp_location": "./tmp/",
-  "amqp_queue" : "HomeLess-queue",
-  "amqp_exchange" : "HomeLess-exchange"
+  "amqp_exchange" : "HomeLess-exchange",
+  "out_location": "./pdf/"
 }
