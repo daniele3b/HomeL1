@@ -121,6 +121,11 @@ function markdownEditFile(data) {
   });
 }
 
+function deleteTmpFile(src) {
+  fs.unlinkSync(src);
+  console.log("Temporary file deleted");
+}
+
 function CreatePdf(data) {
   var src = config.get("tmp_location") + data.name + data.surname + ".md";
   var out = config.get("out_location") + data.name + data.surname + ".pdf";
@@ -128,6 +133,7 @@ function CreatePdf(data) {
     console.log("Created file to convert!");
     Pandoc(src, out).then(() => {
       console.log("PDF created!");
+      deleteTmpFile(src);
     });
   });
 }

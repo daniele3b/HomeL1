@@ -13,7 +13,7 @@ CreatePdf({
   city: "Guidonia Montecelio",
   cap: "00012",
   to: "Avv Ivan Giacomoni",
-  lang: "ita",
+  lang: "eng",
 });
 
 //Inviare email di prova (mancano le credenziali)
