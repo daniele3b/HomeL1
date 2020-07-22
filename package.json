@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/daniele3b/HomeL1/issues"
   },
-  "homepage": "https://github.com/daniele3b/HomeL1#readme"
+  "homepage": "https://github.com/daniele3b/HomeL1#readme",
+  "dependencies": {
+    "config": "^3.3.1"
+  }
 }

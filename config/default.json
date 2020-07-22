@@ -1,1 +1,4 @@
-{}
+{
+  "template_location": "./template/",
+  "tmp_location": "./tmp/"
+}
