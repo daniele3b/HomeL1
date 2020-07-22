@@ -18,6 +18,7 @@
   "homepage": "https://github.com/daniele3b/HomeL1#readme",
   "dependencies": {
     "amqplib": "^0.6.0",
-    "config": "^3.3.1"
+    "config": "^3.3.1",
+    "node-pandoc": "^0.3.0"
   }
 }

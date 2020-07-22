@@ -1,6 +1,6 @@
-const { markdownEditFile } = require("./helper/markdownEdit");
+const { CreatePdf } = require("./helper/markdownEdit");
 
-markdownEditFile({
+CreatePdf({
   name: "Daniele",
   surname: "Bufalieri",
   birthday_day: "02",
@@ -15,5 +15,3 @@ markdownEditFile({
   to: "Avv Ivan Giacomoni",
   lang: "ita",
 });
-
-console.log("asfsa");
