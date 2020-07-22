@@ -1,8 +1,8 @@
 --- 
  name: Daniele
  surname: Bufalieri
- birthday: 12/02/1998
- day: 7/22/2020
+ birthday: 02/12/1998
+ day: 22/7/2020
  street: Via Attilio Palozza 47
  city: Guidonia Montecelio
  cap: 00012
@@ -22,16 +22,16 @@ Terracina 123
 \
 \
 \
-Dear $to$
-Parramatta Local Court, Case number 2011/000012
-Your ref: BAL12345
-I refer to your letter dated 10 October 2011.
+Caro $to$
+Roma corte legale, Caso numero 2011/000012
+Il tuo rif: BAL12345
+Ti riporto la tua lettera datata 10 Ottobre 2011
 
-I deny that I owe your client any money at all. I hired your client to do gardening work at my property, but your client failed to do any of the work agreed upon, and in fact did not do any work on my property at all.
-As a result, I had to hire another gardener to do the work your client had originally agreed to do. I enclose a receipt for the gardening work performed by the other gardener.​
+Nego di dover del denaro al tuo cliente. Ho assunto il tuo cliente per fare lavori di giardinaggio nella mia proprietà, ma il tuo cliente non è riuscito a svolgere nessuno dei lavori concordati, e in effetti non ha fatto alcun lavoro sulla mia proprietà.
+Di conseguenza, ho dovuto assumere un altro giardiniere per fare il lavoro che il tuo cliente aveva inizialmente accettato di fare. Allego una ricevuta per il lavoro di giardinaggio svolto dall'altro giardiniere.
 
-I ask that your client file a Notice of Discontinuance and that a copy of the sealed Notice of Discontinuance be served on me within 7 days of the date of this letter.
+Chiedo che il tuo cliente presenti una notifica di interruzione e che una copia della notifica di interruzione sigillata mi venga notificata entro 7 giorni dalla data della presente lettera.
 
-Yours faithfully,
+Distinti saluti,
 
 $name$ $surname$
