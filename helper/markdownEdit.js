@@ -121,23 +121,14 @@ function markdownEditFile(data) {
   });
 }
 
-callback = function (err, result) {
-  if (err) {
-    console.error("Oh Nos: ", err);
-  }
-
-  // For output to files, the 'result' will be a boolean 'true'.
-  // Otherwise, the converted value will be returned.
-  console.log(result);
-  return result;
-};
-
 function CreatePdf(data) {
   var src = config.get("tmp_location") + data.name + data.surname + ".md";
   var out = config.get("out_location") + data.name + data.surname + ".pdf";
   markdownEditFile(data).then((v) => {
     console.log("Created file to convert!");
-    Pandoc(src, out);
+    Pandoc(src, out).then(() => {
+      console.log("PDF created!");
+    });
   });
 }
 
