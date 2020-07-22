@@ -1,10 +1,7 @@
 fs = require("fs");
 const config = require("config");
-
-var nodePandoc = require("node-pandoc");
-var src, args, callback;
-
 const util = require("util");
+const { emailSender } = require("./emailSender");
 const exec = util.promisify(require("child_process").exec);
 
 async function Pandoc(src, out) {
@@ -129,14 +126,13 @@ function deleteTmpFile(src) {
 function CreatePdf(data) {
   var src = config.get("tmp_location") + data.name + data.surname + ".md";
   var out = config.get("out_location") + data.name + data.surname + ".pdf";
-  console.log(src);
-  console.log(out);
-  console.log("pandoc " + src + " --template " + src + "  | pandoc -o " + out);
   markdownEditFile(data).then((v) => {
     console.log("Created file to convert!");
     Pandoc(src, out).then(() => {
       console.log("PDF created!");
       deleteTmpFile(src);
+      emailSender(out, data);
+      console.log("Started to send email to:" + data.email);
     });
   });
 }
