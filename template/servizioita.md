@@ -1,4 +1,4 @@
-![](C:\Users\danie\Documents\diana_app\src\assets\logo.png)
+![](..\assets\logo.png)
 
     															$name$ $surname$
     															$street$

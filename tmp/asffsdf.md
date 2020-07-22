@@ -1,4 +1,14 @@
-![](..\assets\logo.png)
+--- 
+ name: asf
+ surname: fsdf
+ birthday: 02/01/2019
+ day: 7/22/2020
+ street: sfsfsd
+ city: sdgsd
+ cap: 21312
+ to: vgdfg
+...
+![](C:\Users\danie\Documents\diana_app\src\assets\logo.png)
 
     															$name$ $surname$
     															$street$
