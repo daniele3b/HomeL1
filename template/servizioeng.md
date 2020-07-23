@@ -1,4 +1,4 @@
-![](..\assets\logo.png)
+![](https://octodex.github.com/images/yaktocat.png)
 
     															$name$ $surname$
     															$street$
