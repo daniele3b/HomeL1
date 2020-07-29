@@ -1,7 +1,7 @@
 const { receiveInfo } = require("./amqp/consumer.js");
 const { GenerateTemplate } = require("./startup/templateLoader");
 
-//GenerateTemplate();
+GenerateTemplate();
 
 receiveInfo();
 //Inviare email di prova (mancano le credenziali)
