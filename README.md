@@ -28,6 +28,7 @@ After installing, you have to follow these instructions:
 * nodemailer
 * randomstring
 * replace-in-file
+* cryptr
 
 # Others repositories
 
