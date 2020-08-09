@@ -7,5 +7,7 @@
   "amqp_binding_key": "1",
   "out_location": "./pdf/",
   "models_location": "./models",
-  "template_location_output": "./template"
+  "template_location_output": "./template",
+
+  "port": "8081"
 }
