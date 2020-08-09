@@ -60,7 +60,7 @@ function receiveInfo() {
                 city: info.city,
                 cap: info.cap,
                 to: info.to,
-                lang: "eng",
+                lang: info.lang,
               });
             },
             {
