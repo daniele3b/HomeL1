@@ -96,6 +96,44 @@ function markdownEditFile(data) {
       );
     }
 
+    if (data.lang == "arb") {
+      fs.writeFile(
+        config.get("tmp_location") + data.name + data.surname + ".md",
+        "--- \n name: " +
+          data.name +
+          "\n surname: " +
+          data.surname +
+          "\n birthday: " +
+          data.birthday_day +
+          "/" +
+          data.birthday_month +
+          "/" +
+          data.birthday_year +
+          "\n day: " +
+          data.day +
+          "/" +
+          data.month +
+          "/" +
+          data.year +
+          "\n street: " +
+          data.street +
+          "\n city: " +
+          data.city +
+          "\n cap: " +
+          data.cap +
+          "\n to: " +
+          data.to +
+          "\n...\n",
+        function (err) {
+          if (err) {
+            reject(-1);
+            throw err;
+          }
+          console.log("File is created successfully.");
+        }
+      );
+    }
+
     //Creo il file md completo necessario
     var w = fs.createWriteStream(
       config.get("tmp_location") + data.name + data.surname + ".md",

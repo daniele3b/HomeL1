@@ -1,8 +1,8 @@
-                                $name$ $surname$
+$name$ $surname$
 
-                                $street$
+$street$
 
-                                $city$ $cap$
+$city$ $cap$
 
 $day$
 
